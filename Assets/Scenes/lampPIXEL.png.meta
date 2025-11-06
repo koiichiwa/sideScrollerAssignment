@@ -125,10 +125,10 @@ TextureImporter:
       name: lampPIXEL_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 209
-        width: 50
-        height: 142
+        x: 903
+        y: 623
+        width: 138
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: lampPIXEL_1
       rect:
         serializedVersion: 2
-        x: 614
-        y: 209
-        width: 53
-        height: 142
+        x: 2079
+        y: 623
+        width: 138
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: lampPIXEL_2
       rect:
         serializedVersion: 2
-        x: 1013
-        y: 209
-        width: 50
-        height: 142
+        x: 3255
+        y: 623
+        width: 138
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: lampPIXEL_3
       rect:
         serializedVersion: 2
-        x: 1400
-        y: 209
-        width: 50
-        height: 142
+        x: 4399
+        y: 623
+        width: 138
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

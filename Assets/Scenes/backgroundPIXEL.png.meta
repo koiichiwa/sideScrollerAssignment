@@ -116,10 +116,10 @@ TextureImporter:
       name: backgroundPIXEL_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 255
         y: 0
-        width: 1701
-        height: 351
+        width: 5034
+        height: 1044
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
