@@ -579,8 +579,6 @@ GameObject:
   - component: {fileID: 1068412776}
   - component: {fileID: 1068412779}
   - component: {fileID: 1068412778}
-  - component: {fileID: 1068412780}
-  - component: {fileID: 1068412783}
   - component: {fileID: 1068412781}
   - component: {fileID: 1068412782}
   m_Layer: 0
@@ -675,9 +673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8a0f9f58d6c714ba515570c99e6beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 10
-  spriteRenderer: {fileID: 1068412776}
-  animator: {fileID: 1068412779}
 --- !u!95 &1068412779
 Animator:
   serializedVersion: 7
@@ -700,22 +695,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1068412780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068412775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6af9c57aaf2a2144b71da6ab1b470e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterJump
-  playerMovementState: {fileID: 1068412783}
-  rigidBody: {fileID: 1068412781}
-  spriteRenderer: {fileID: 1068412776}
-  jumpForce: 9
 --- !u!50 &1068412781
 Rigidbody2D:
   serializedVersion: 5
@@ -742,7 +721,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1068412782
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -780,21 +759,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.3, y: 5.7}
   m_Direction: 0
---- !u!114 &1068412783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068412775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 336a660c4b3198b4eb8d3284470f96cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterMovementState
-  playerMovement: {fileID: 0}
-  animator: {fileID: 1068412779}
-  rigidBody: {fileID: 1068412781}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

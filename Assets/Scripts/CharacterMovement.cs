@@ -4,37 +4,39 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Animator animator;
-    private Vector2 movement;
+    float horizontalInput;
+    float moveSpeed = 6f;
+    bool isFacingRight = false;
 
-    private float xPosLastFrame;
+    Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+    }
+
     void Update()
     {
-        FlipCharacterX();
-        HandleMovement();
+        horizontalInput = Input.GetAxis("Horizontal");
+
+        FlipSprite();
     }
-    private void FlipCharacterX()
+
+    private void FixedUpdate()
     {
-        if (transform.position.x > xPosLastFrame)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (transform.position.x < xPosLastFrame)
-        {
-            spriteRenderer.flipX = true;
-        }
-
-        xPosLastFrame = transform.position.x;
+        rb.linearVelocity = new Vector2 (horizontalInput * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void HandleMovement()
-
+    void FlipSprite()
     {
-        float input = Input.GetAxisRaw("Horizontal");
-        movement.x = input * speed * Time.deltaTime;
-        transform.Translate(movement);
-        
+        if(isFacingRight && horizontalInput > 0f || !isFacingRight && horizontalInput < 0f)
+                {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
     }
+
 }
