@@ -35,15 +35,6 @@ public class CharacterMovement : MonoBehaviour
         float input = Input.GetAxisRaw("Horizontal");
         movement.x = input * speed * Time.deltaTime;
         transform.Translate(movement);
-        if (input != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-
-            animator.SetBool("isRunning", false);
-
-        }
+        
     }
 }
